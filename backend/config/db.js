@@ -8,9 +8,9 @@ const connectDB = async () => {
             useCreateIndex:true
         })
 
-        console.log(`DB is connected in ${conn.connection.host}`)
+        console.log(`DataBase is connected in ${conn.connection.host}`.cyan.underline)
     } catch (error) {
-        console.error(error.message);
+        console.error(`Error: ${error.message}`.red.underline.bold);
         procces.exit(1);
     }
 }
