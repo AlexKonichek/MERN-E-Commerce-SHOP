@@ -9,9 +9,8 @@ import { listProductDetails } from '../../actions/productActions'
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
-
   const dispatch = useDispatch()
-
+  
   const productDetails = useSelector((state) => state.productDetails)
   const { loading, error, product } = productDetails
 
@@ -22,7 +21,6 @@ const ProductScreen = ({ history, match }) => {
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
-
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
