@@ -50,7 +50,7 @@ const CartScreen = ({ match, location, history }) => {
                   </Col>
                   <Col md={2}>${item.price}</Col>
                   <Col md={2}>
-                    <Form.Control className="p-1"
+                    <Form.Control className="p-1 pl-4"
                       as='select'
                       value={item.qty}
                       onChange={(e) =>
@@ -94,7 +94,7 @@ const CartScreen = ({ match, location, history }) => {
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                 .toFixed(2)}
             </ListGroup.Item>
-            <ListGroup.Item>
+            <ListGroup.Item>frontend\src\screens\CartScreen\CartScreen.js
               <Button
                 type='button'
                 className='btn-block'
